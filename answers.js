@@ -117,7 +117,16 @@ function gamma(z) { //accurate to about 15 decimals
 }
 
 function factorialOfNumber(number) {
-    return gamma(number + 1);
-}                                           // woot woot it works!
-
-
+    if (number % 1 != 0 || number<0){
+        return gamma(number + 1);
+    }
+    else {
+       if(number == 0) {
+           return 1;
+       }
+       for(var i = number; --i; ) {
+           number *= i;
+       }
+       return number;
+    }
+}                                          // woot woot it works!
