@@ -92,3 +92,32 @@ function reverseString(strg){
     return strg.split("").reverse().join("")
 }
 
+// Write a function that takes a number and returns the factorial of a number.
+// The factorial of 5 is 5x4x3x2x1. The factorial of 0 is 1. Test your input on a few numbers, including negative numbers.
+
+// ok, now it gets interesting. I'm gonna try to implement the gamma function, as you didn't specify if your number can have decimals, I assumed it can.
+// so here we go
+
+function gamma(z) { //accurate to about 15 decimals
+    // tadaam - magic constants!
+    var g = 7, // g represents the precision desired, C is the values of C[i] to plug into Lanczos' formula
+        C = [0.99999999999980993, 676.5203681218851, -1259.1392167224028, 771.32342877765313, -176.61502916214059, 12.507343278686905, -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7];
+  
+    if (z < 0.5) return Math.PI / (Math.sin(Math.PI * z) * gamma(1 - z));
+    else {
+        z -= 1;
+
+        var x = C[0];
+        for (var i = 1; i < g + 2; i++)
+        x += C[i] / (z + i);
+
+        var t = z + g + 0.5;
+        return Math.sqrt(2 * Math.PI) * Math.pow(t, (z + 0.5)) * Math.exp(-t) * x;
+    }
+}
+
+function factorialOfNumber(number) {
+    return gamma(number + 1);
+}                                           // woot woot it works!
+
+
