@@ -130,3 +130,18 @@ function factorialOfNumber(number) {
        return number;
     }
 }                                          // woot woot it works!
+
+// Write a function that takes a phrase as a string, and returns the longest word in that phrase.
+// If the phrase contains more than one such word, return the first occurrence. Test your function on a few inputs.
+
+
+function longer(champ, contender) {
+  return (contender.length > champ.length) ? contender: champ;
+}
+
+function longestWord(strg) {
+    var words = strg.split(' ');
+    return words.reduce(longer);
+}
+
+
