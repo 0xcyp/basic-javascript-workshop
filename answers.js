@@ -81,5 +81,6 @@ function doAsISayWithNumbers(number1, number2, strg) {
 // Test your function with various inputs.
 
 function repeatedString(strg,number) {
-    
+    return strg.repeat(number)
 }
+
