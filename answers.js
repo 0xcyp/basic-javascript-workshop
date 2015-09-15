@@ -162,3 +162,12 @@ function everyWordCapitalized(strg) {
 function largestNumber(arr){
     return Math.max.apply( Math, arr );
 };
+
+// Write a function that takes an array, and returns a filtered array.
+// The filtered array should only contain the truthy values from the initial array.
+// Hint: there is an array method called “filter” that can help you with this :)
+
+function filterArray(arr){
+    return arr.filter(function (x) { return Boolean(x); });
+};
+
