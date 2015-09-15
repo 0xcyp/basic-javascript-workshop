@@ -157,3 +157,8 @@ function everyWordCapitalized(strg) {
     );
 }
 
+// Write a function that takes an array and returns the largest number of the array. Test your function on a few inputs.
+
+function largestNumber(arr){
+    return Math.max.apply( Math, arr );
+};
