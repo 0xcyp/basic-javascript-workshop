@@ -144,4 +144,16 @@ function longestWord(strg) {
     return words.reduce(longer);
 }
 
+// Write a function that takes a phrase, and returns the same phrase with every word capitalized.
+// For example, if you pass your function "hello world", it should return "Hello World"
+// and if you pass it "HELLO WORLD" or even "HeLLo WoRLD", it will also return "Hello World". Test your function of a few inputs.
+
+function everyWordCapitalized(strg) {
+    return strg.replace(/\b\w+/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            
+        }
+    );
+}
 
