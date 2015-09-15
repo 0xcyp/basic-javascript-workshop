@@ -171,3 +171,13 @@ function filterArray(arr){
     return arr.filter(function (x) { return Boolean(x); });
 };
 
+// Write a function that takes an array of numbers, and returns the sum of all the numbers in the array.
+
+function sumOfNumbers(arr){
+    var sum = arr.reduce(add, 0);
+    function add(a, b) {
+        return a + b;
+    }
+    return sum
+}
+
