@@ -185,7 +185,7 @@ function sumOfNumbers(arr){
 // For example, with [1,2,3] and [1,2,4,5] the function should return [3,4,5]. Test your function on different inputs.
 // Hint: you should look up array methods indexOf and slice.
 
-function arrayDifference(arr1, arr2) {
+function arraysDifference(arr1, arr2) {
   var a=[], diff=[];
   for(var i=0;i<arr1.length;i++)
     a[arr1[i]]=true;
@@ -196,4 +196,16 @@ function arrayDifference(arr1, arr2) {
     diff.push(k);
   return diff;
 }
+
+// Challenge: write a function that takes an array and a function as arguments.
+// The function should return a new array that maps every element of the input array by passing it through the function you received.
+// You are not allowed to use Array.map for this challenge, otherwise it would be too easy :)
+
+function mapArray(arr, function(){
+    }
+    ){
+    
+} // no se... NEED HELP ON THAT.
+
+
 
