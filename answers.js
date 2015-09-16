@@ -181,3 +181,19 @@ function sumOfNumbers(arr){
     return sum
 }
 
+// Write a function that takes two arrays, and returns an array of all elements that are only in one array.
+// For example, with [1,2,3] and [1,2,4,5] the function should return [3,4,5]. Test your function on different inputs.
+// Hint: you should look up array methods indexOf and slice.
+
+function arrayDifference(arr1, arr2) {
+  var a=[], diff=[];
+  for(var i=0;i<arr1.length;i++)
+    a[arr1[i]]=true;
+  for(var i=0;i<arr2.length;i++)
+    if(a[arr2[i]]) delete a[arr2[i]];
+    else a[arr2[i]]=true;
+  for(var k in a)
+    diff.push(k);
+  return diff;
+}
+
