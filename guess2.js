@@ -24,7 +24,7 @@ for (var i=1; i<=totalTurns; i++){
             }
         }
         if (nmbr[i]==realNmbr){
-            alert("You guessed it right! These are your guesses: "+nmbr[i-3]+", "+nmbr[i-2]+", "+nmbr[i-1]+", "+nmbr[i]);
+            alert("You guessed it right!");
             totalTurns=0
         }
         
